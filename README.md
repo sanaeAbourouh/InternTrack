@@ -83,19 +83,34 @@ The Reminders section allows users to create and manage internship-related remin
 ### 👤 Profile
 The Profile section provides personal information management, CV management, application statistics, password management, and logout.
 
+
 ## Screenshots
+
 ### 🚀 Splash Screen
-![InternTrack Splash Screen](screenshots/splash.png)
+
+<img src="screenshots/splash.png" width="300">
+
 ### 🔐 Login
-![InternTrack Login](screenshots/login.png)
+
+<img src="screenshots/login.png" width="300">
+
 ### 🏠 Home
-![InternTrack Home](screenshots/home.png)
+
+<img src="screenshots/home.png" width="300">
+
 ### 📋 Applications
-![InternTrack Applications](screenshots/applications.png)
+
+<img src="screenshots/applications.png" width="300">
+
 ### ⏰ Reminders
-![InternTrack Reminders](screenshots/reminders.png)
+
+<img src="screenshots/reminders.png" width="300">
+
 ### 👤 Profile
-![InternTrack Profile](screenshots/profile.png)
+
+<img src="screenshots/profile.png" width="300">
+
+
 ## Technologies
 
 - **Kotlin** — Main programming language
