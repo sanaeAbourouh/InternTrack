@@ -1,0 +1,12 @@
+.gradle/
+.idea/
+build/
+*/build/
+local.properties
+.DS_Store
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+20230994_intertrack Final project(1) 15.28.27.pptx
+exportToHTML/

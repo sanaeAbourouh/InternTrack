@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:paddingTop="48dp">
+
+        <!-- Welcome Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="#FDF8FF"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvWelcomeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="👋 Welcome, User!"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#3C1E6D"
+                        android:layout_marginBottom="6dp" />
+
+                    <TextView
+                        android:id="@+id/tvWelcomeSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ready to discover new opportunities today?"
+                        android:textSize="14sp"
+                        android:textStyle="normal"
+                        android:textColor="#6C4AB6"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvWelcomeDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Find internships, save favorites, and track your applications."
+                        android:textSize="12sp"
+                        android:textColor="#666666" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivWelcomeIllustration"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:src="@drawable/ic_briefcase"
+                    android:scaleType="fitCenter"
+                    android:layout_marginStart="12dp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Search Bar with Country Selector -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:hint="Search internships ..."
+                android:textSize="14sp"
+                android:textColorHint="#AAAAAA"
+                android:textColor="#333333"
+                android:background="@drawable/input_background"
+                android:padding="12dp"
+                android:layout_marginEnd="10dp" />
+
+            <!-- Country Selector Button - Smaller, shows selected country -->
+            <TextView
+                android:id="@+id/tvCountrySelector"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:minWidth="110dp"
+                android:text="🌍 All"
+                android:textSize="13sp"
+                android:textColor="#3C1E6D"
+                android:gravity="center"
+                android:background="@drawable/country_selector_background"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <!-- Categories Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Browse by Category"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#3C1E6D"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Horizontal Categories Scroll -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/categorySoftware"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Software Development"
+                    android:textSize="13sp"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/category_selected"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/categoryAI"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="AI &amp; ML"
+                    android:textSize="13sp"
+                    android:textColor="#777777"
+                    android:background="@drawable/category_unselected"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/categoryCybersecurity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Cybersecurity"
+                    android:textSize="13sp"
+                    android:textColor="#777777"
+                    android:background="@drawable/category_unselected"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/categoryDataScience"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Data Science"
+                    android:textSize="13sp"
+                    android:textColor="#777777"
+                    android:background="@drawable/category_unselected"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/categoryMarketing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Marketing"
+                    android:textSize="13sp"
+                    android:textColor="#777777"
+                    android:background="@drawable/category_unselected"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/categoryBusiness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Business"
+                    android:textSize="13sp"
+                    android:textColor="#777777"
+                    android:background="@drawable/category_unselected"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/categoryFinance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Finance"
+                    android:textSize="13sp"
+                    android:textColor="#777777"
+                    android:background="@drawable/category_unselected"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:id="@+id/categoryDesign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Design"
+                    android:textSize="13sp"
+                    android:textColor="#777777"
+                    android:background="@drawable/category_unselected"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!-- Recommended Internships Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recommended Internships"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#3C1E6D"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="32dp"
+            android:visibility="gone" />
+
+        <!-- Internships Container -->
+        <LinearLayout
+            android:id="@+id/internshipsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+</ScrollView>
